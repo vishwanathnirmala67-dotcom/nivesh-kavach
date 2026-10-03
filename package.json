@@ -1,0 +1,15 @@
+{
+  "name": "nivesh-kavach",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NiveshKavach - privacy-first scam shield for Indian investors (SANGYAN Hackathon, Track A)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test/engine.test.js && node test/api.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "dependencies": {}
+}

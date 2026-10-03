@@ -1,0 +1,275 @@
+/* NiveshKavach translations: English, Hindi, Marathi */
+(function () {
+  'use strict';
+  const DICT = {
+    en: {
+      brand_a: 'Nivesh', brand_b: 'Kavach', tagline: 'Invest safe. Stay alert.',
+      nav_home: 'Home', nav_check: 'Scam Checker', nav_quiz: 'Quiz', nav_help: 'Help', nav_dashboard: 'Dashboard', nav_profile: 'Profile',
+      login: 'Login', register: 'Sign up', logout: 'Logout', menu: 'Menu', lang_label: 'Language',
+      theme_to_dark: 'Switch to dark mode', theme_to_light: 'Switch to light mode', big_text: 'Bigger text', skip: 'Skip to content',
+      /* home */
+      h_badge: 'Investor protection - Track A',
+      h_title1: 'Spot the scam', h_title2: 'before it spots your money.',
+      h_sub: 'Check any suspicious message, link or tip in seconds - in your language, on your phone. Your message never leaves your device.',
+      cta_start: 'Create free account', cta_try: 'Check a message now', cta_dash: 'Open my dashboard',
+      pill1: '100% on-device analysis', pill2: 'Hindi - English - Marathi', pill3: 'Voice enabled',
+      demo_live: 'Live detection', demo_msg: 'Message',
+      f_title: 'Everything an investor needs to stay safe', f_sub: 'Built for first-time investors across Bharat.',
+      f1t: 'Smart scam detection', f1d: '12 fraud patterns: guaranteed returns, fake tips groups, OTP and KYC phishing and more.',
+      f2t: 'Link and domain check', f2d: 'Catches look-alike SEBI, NSDL and bank domains, shortened and unsafe links.',
+      f3t: 'Speak and listen', f3d: 'Voice input and read-aloud in Hindi, Marathi and English for low-literacy users.',
+      f4t: 'Private by design', f4d: 'Your message is analysed in your browser. Only a score is saved to your history.',
+      f5t: 'Scam-spotting quiz', f5d: 'Learn real-world patterns with quick scenarios and track your progress.',
+      f6t: 'Clear action plan', f6d: 'Next steps: 1930 cyber helpline, cybercrime.gov.in and SEBI SCORES.',
+      how_title: 'How it works',
+      s1t: 'Paste or speak', s1d: 'Copy the suspicious message or link, or just say it aloud.',
+      s2t: 'Get a risk score', s2d: 'See why it looks risky, in simple words.',
+      s3t: 'Act safely', s3d: 'Follow the steps and warn your family in one tap.',
+      st1: 'scam patterns', st2: 'languages', st3: 'messages uploaded', st4: 'cyber helpline',
+      promise_title: 'Our promise', promise1: 'No stock tips, price predictions or broker promotion.', promise2: 'No access to your OTP, SMS or contacts.', promise3: 'We always show uncertainty - "no red flags" is not "safe".', promise4: 'You can delete your account and data any time.',
+      cta2_title: 'Protect yourself and your family today', cta2_sub: 'It takes 30 seconds to create an account.',
+      /* auth */
+      a_login_title: 'Welcome back', a_login_sub: 'Login to see your safety dashboard.',
+      a_reg_title: 'Create your account', a_reg_sub: 'Free forever. No card needed.',
+      a_side_title: 'Your shield against investment fraud', a_side1: 'Detect scams in Hindi, Marathi and English', a_side2: 'Track what you checked, privately', a_side3: 'Learn with a fun scam quiz',
+      f_name: 'Full name', f_phone: 'Mobile number', f_email: 'Email', f_pass: 'Password', f_newpass: 'Create password', f_curpass: 'Current password',
+      ph_name: 'Your full name', ph_phone: '10-digit mobile number', ph_email: 'you@example.com', ph_pass: 'Your password', ph_newpass: 'At least 8 characters',
+      pass_hint: 'Minimum 8 characters with a letter and a number.', str_weak: 'Weak', str_ok: 'Okay', str_strong: 'Strong',
+      btn_login: 'Login', btn_register: 'Create account', have_acc: 'Already have an account?', no_acc: 'New here?',
+      show_pass: 'Show password', hide_pass: 'Hide password',
+      consent: 'I understand my messages are analysed on my device and never uploaded.',
+      welcome_toast: 'Welcome, {name}!', bye_toast: 'You are logged out.',
+      /* errors */
+      err_invalid_name: 'Enter your full name (2-60 letters).', err_invalid_phone: 'Enter a valid 10-digit Indian mobile number.',
+      err_invalid_email: 'Enter a valid email address.', err_invalid_password: 'Password needs 8+ characters with a letter and a number.',
+      err_exists_email: 'This email is already registered. Try logging in.', err_exists_phone: 'This mobile number is already registered.',
+      err_creds: 'Wrong email or password.', err_rate: 'Too many attempts. Please try again later.', err_generic: 'Something went wrong. Please try again.',
+      err_network: 'Cannot reach the server. Is it running?', err_file_type: 'Please choose a JPG, PNG or WEBP image.', err_file_big: 'Image is too large (max 2 MB).',
+      err_auth: 'Please login again.', err_wrong_password: 'Password is incorrect.', err_consent: 'Please accept to continue.', err_required: 'This field is required.',
+      err_forbidden: 'Request blocked. Refresh the page and try again.', err_invalid_input: 'Invalid data.',
+      /* dashboard */
+      d_hello: 'Hello, {name}', d_sub: 'Here is your safety summary.',
+      d_checks: 'Messages checked', d_high: 'High-risk caught', d_quiz: 'Best quiz score', d_plays: 'Quizzes played',
+      d_recent: 'Recent checks', d_empty: 'No checks yet. Check your first message to see it here.', d_top: 'Most common red flags', d_dist: 'Risk breakdown', d_cta: 'Check a message', d_none: 'Nothing yet',
+      d_privacy: 'Only the score and flag names are saved. Your message text is never stored.',
+      /* levels */
+      lvl_low: 'No big red flags', lvl_mid: 'Suspicious - be careful', lvl_high: 'High risk - likely a scam', score: 'Risk score',
+      /* checker */
+      c_title: 'Scam Checker', c_sub: 'Paste or speak a message, link or tip. We look for known fraud patterns.',
+      c_paste: 'Suspicious message or link', c_ph: 'Paste here, e.g. "Join our VIP group, guaranteed 5% daily profit. Pay registration fee today."',
+      c_check: 'Check now', c_mic: 'Speak', c_listening: 'Listening...', c_clear: 'Clear', c_samples: 'Try an example:',
+      c_s1: 'Guaranteed returns', c_s2: 'KYC threat', c_s3: 'Tips group', c_s4: 'Genuine bank alert',
+      c_empty: 'Type or paste a message first.', c_idle_t: 'Your result will appear here', c_idle_d: 'Paste a message on the left and press Check now.',
+      c_none: 'No known scam patterns matched.', c_links: 'Link check', c_next: 'What to do now',
+      c_speak: 'Read aloud', c_share: 'Warn family on WhatsApp',
+      c_disc: 'This is a pattern check, not a guarantee. "No red flags" does NOT mean safe. When unsure, verify on official sites.',
+      c_private: 'Your message stays on this device. Only the score is saved to your history.', c_saved: 'Saved to your history.', c_login_hint: 'Login to keep a private history.',
+      c_voice_no: 'Voice input is not supported here. Please use Chrome.', c_voice_err: 'Could not hear you. Try again.',
+      lf_http: 'Not secure (http)', lf_ip: 'Uses a raw IP address', lf_short: 'Shortened link hides the real address', lf_puny: 'Look-alike characters in the domain', lf_tld: 'Risky domain ending', lf_fake: 'Pretends to be {brand} but is NOT the official site', lf_official: 'Matches an official domain',
+      steps_high: ['Do NOT reply, click, pay or share OTP / PIN.', 'Block and report the sender.', 'If money is lost: call 1930 (cyber helpline) immediately and report at cybercrime.gov.in.', 'For market-related complaints use SEBI SCORES.', 'Tell your family and warn others.'],
+      steps_mid: ['Do not click links or pay yet.', 'Check the company on the official SEBI website (registered intermediaries).', 'Ask a trusted family member before acting.', 'Still unsure? Call 1930 or ask your bank.'],
+      steps_low: ['Still verify the sender using the official website or app.', 'Never share OTP / PIN with anyone.', 'Report anything that feels off at cybercrime.gov.in or 1930.'],
+      share_text: 'Careful! I checked a message with NiveshKavach: {level}. Never share OTP/PIN. If scammed, call 1930.',
+      /* quiz */
+      q_title: 'Scam Spotter Quiz', q_sub: 'Is this message a scam or safe? Tap to answer.', q_scam: 'Scam', q_safe: 'Looks safe', q_next: 'Next', q_finish: 'See result',
+      q_right: 'Correct!', q_wrong: 'Not quite.', q_done: 'Quiz complete!', q_score: 'Your score: {s} / {n}', q_again: 'Play again', q_saved: 'Score saved to your dashboard.', q_of: 'Question {i} of {n}',
+      q_msg_great: 'Excellent! You can spot scams.', q_msg_ok: 'Good start. Practice makes you safer.', q_msg_low: 'Stay careful and review the tips on the Help page.',
+      /* profile */
+      p_title: 'My profile', p_photo: 'Change photo', p_remove: 'Remove photo', p_uploading: 'Uploading...', p_photo_ok: 'Profile photo updated.', p_photo_gone: 'Photo removed.',
+      p_details: 'Personal details', p_email_ro: 'Email cannot be changed.', p_save: 'Save changes', p_saved: 'Profile updated.',
+      p_security: 'Security', p_changepass: 'Update password', p_pass_ok: 'Password updated.',
+      p_member: 'Member since {date}', p_danger: 'Danger zone', p_delete: 'Delete my account', p_delete_desc: 'This permanently deletes your account, photo and history.', p_delete_confirm: 'Enter your password to confirm', p_delete_go: 'Yes, delete everything', p_cancel: 'Cancel', p_deleted: 'Account deleted.',
+      /* help */
+      help_title: 'Stay safe: quick guide', help_sub: 'Simple rules that stop most investment frauds.',
+      help_tips: ['Never share OTP, PIN, CVV or password with anyone - not even "bank staff".', 'No one can guarantee returns. Be careful with "sure-shot" tips and daily-profit offers.', 'Check any broker or adviser on the official SEBI website before investing.', 'Do not install apps or share your screen on a stranger\'s request.', 'You never need to enter a PIN to receive money.', 'Talk to family before paying. Scammers hate second opinions.'],
+      help_res: 'If you are scammed, act fast', help_call: 'Call 1930', help_call_d: 'National cyber crime helpline. Call within the first hours to try to freeze the money.', help_portal_d: 'Report online fraud on the national portal.', help_scores_d: 'File complaints about brokers and listed companies.',
+      foot_disc: 'NiveshKavach is an awareness tool, not financial advice. It cannot guarantee that any message is safe.', foot_built: 'Built for the SANGYAN Hackathon - Track A',
+      loading: 'Loading...', not_found: 'Page not found'
+    },
+
+    hi: {
+      brand_a: 'निवेश', brand_b: 'कवच', tagline: 'सुरक्षित निवेश। हमेशा सतर्क।',
+      nav_home: 'होम', nav_check: 'स्कैम चेकर', nav_quiz: 'क्विज़', nav_help: 'मदद', nav_dashboard: 'डैशबोर्ड', nav_profile: 'प्रोफ़ाइल',
+      login: 'लॉगिन', register: 'साइन अप', logout: 'लॉगआउट', menu: 'मेन्यू', lang_label: 'भाषा',
+      theme_to_dark: 'डार्क मोड चालू करें', theme_to_light: 'लाइट मोड चालू करें', big_text: 'बड़ा टेक्स्ट', skip: 'सीधे सामग्री पर जाएं',
+      h_badge: 'निवेशक सुरक्षा - ट्रैक A',
+      h_title1: 'ठगी पहचानें', h_title2: 'पैसा जाने से पहले।',
+      h_sub: 'कोई भी संदिग्ध मैसेज, लिंक या टिप सेकंडों में जांचें - अपनी भाषा में, अपने फोन पर। आपका मैसेज आपके डिवाइस से बाहर नहीं जाता।',
+      cta_start: 'मुफ्त अकाउंट बनाएं', cta_try: 'अभी मैसेज जांचें', cta_dash: 'मेरा डैशबोर्ड खोलें',
+      pill1: '100% डिवाइस पर जांच', pill2: 'हिंदी - English - मराठी', pill3: 'वॉइस सपोर्ट',
+      demo_live: 'लाइव पहचान', demo_msg: 'मैसेज',
+      f_title: 'सुरक्षित रहने के लिए निवेशक को जो चाहिए', f_sub: 'पूरे भारत के पहली बार निवेश करने वालों के लिए।',
+      f1t: 'स्मार्ट स्कैम पहचान', f1d: '12 ठगी पैटर्न: पक्का रिटर्न, नकली टिप्स ग्रुप, OTP और KYC फ़िशिंग और बहुत कुछ।',
+      f2t: 'लिंक और डोमेन जांच', f2d: 'SEBI, NSDL और बैंक जैसे दिखने वाले नकली डोमेन, छोटे और असुरक्षित लिंक पकड़ता है।',
+      f3t: 'बोलें और सुनें', f3d: 'कम पढ़े-लिखे लोगों के लिए हिंदी, मराठी और अंग्रेज़ी में वॉइस इनपुट और पढ़कर सुनाना।',
+      f4t: 'प्राइवेसी पहले', f4d: 'आपका मैसेज आपके ब्राउज़र में ही जांचा जाता है। हिस्ट्री में सिर्फ स्कोर सेव होता है।',
+      f5t: 'स्कैम पहचान क्विज़', f5d: 'छोटे उदाहरणों से असली ठगी के तरीके सीखें और अपनी प्रगति देखें।',
+      f6t: 'साफ़ एक्शन प्लान', f6d: 'अगले कदम: 1930 साइबर हेल्पलाइन, cybercrime.gov.in और SEBI SCORES।',
+      how_title: 'कैसे काम करता है',
+      s1t: 'पेस्ट करें या बोलें', s1d: 'संदिग्ध मैसेज या लिंक कॉपी करें, या बस बोल दें।',
+      s2t: 'रिस्क स्कोर पाएं', s2d: 'आसान शब्दों में देखें कि यह खतरनाक क्यों लगता है।',
+      s3t: 'सुरक्षित कदम उठाएं', s3d: 'स्टेप्स फॉलो करें और एक टैप में परिवार को सावधान करें।',
+      st1: 'ठगी पैटर्न', st2: 'भाषाएं', st3: 'मैसेज अपलोड हुए', st4: 'साइबर हेल्पलाइन',
+      promise_title: 'हमारा वादा', promise1: 'कोई स्टॉक टिप, भाव का अनुमान या ब्रोकर प्रचार नहीं।', promise2: 'आपके OTP, SMS या कॉन्टैक्ट का एक्सेस नहीं।', promise3: 'हम अनिश्चितता साफ बताते हैं - "कोई खतरा नहीं" का मतलब "सुरक्षित" नहीं।', promise4: 'आप कभी भी अपना अकाउंट और डेटा डिलीट कर सकते हैं।',
+      cta2_title: 'आज ही खुद को और परिवार को सुरक्षित करें', cta2_sub: 'अकाउंट बनाने में सिर्फ 30 सेकंड लगते हैं।',
+      a_login_title: 'वापसी पर स्वागत है', a_login_sub: 'अपना सुरक्षा डैशबोर्ड देखने के लिए लॉगिन करें।',
+      a_reg_title: 'अपना अकाउंट बनाएं', a_reg_sub: 'हमेशा मुफ्त। कार्ड की ज़रूरत नहीं।',
+      a_side_title: 'निवेश ठगी के खिलाफ आपका कवच', a_side1: 'हिंदी, मराठी और अंग्रेज़ी में ठगी पहचानें', a_side2: 'जो जांचा उसका प्राइवेट रिकॉर्ड रखें', a_side3: 'मज़ेदार स्कैम क्विज़ से सीखें',
+      f_name: 'पूरा नाम', f_phone: 'मोबाइल नंबर', f_email: 'ईमेल', f_pass: 'पासवर्ड', f_newpass: 'पासवर्ड बनाएं', f_curpass: 'मौजूदा पासवर्ड',
+      ph_name: 'आपका पूरा नाम', ph_phone: '10 अंकों का मोबाइल नंबर', ph_email: 'you@example.com', ph_pass: 'आपका पासवर्ड', ph_newpass: 'कम से कम 8 अक्षर',
+      pass_hint: 'कम से कम 8 अक्षर, जिनमें एक अक्षर और एक अंक हो।', str_weak: 'कमज़ोर', str_ok: 'ठीक', str_strong: 'मज़बूत',
+      btn_login: 'लॉगिन', btn_register: 'अकाउंट बनाएं', have_acc: 'पहले से अकाउंट है?', no_acc: 'नए हैं?',
+      show_pass: 'पासवर्ड दिखाएं', hide_pass: 'पासवर्ड छुपाएं',
+      consent: 'मैं समझता/समझती हूँ कि मेरे मैसेज मेरे डिवाइस पर ही जांचे जाते हैं, अपलोड नहीं होते।',
+      welcome_toast: 'स्वागत है, {name}!', bye_toast: 'आप लॉगआउट हो गए।',
+      err_invalid_name: 'अपना पूरा नाम लिखें (2-60 अक्षर)।', err_invalid_phone: 'सही 10 अंकों का भारतीय मोबाइल नंबर लिखें।',
+      err_invalid_email: 'सही ईमेल पता लिखें।', err_invalid_password: 'पासवर्ड में 8+ अक्षर, एक अक्षर और एक अंक होना चाहिए।',
+      err_exists_email: 'यह ईमेल पहले से रजिस्टर है। लॉगिन करें।', err_exists_phone: 'यह मोबाइल नंबर पहले से रजिस्टर है।',
+      err_creds: 'ईमेल या पासवर्ड गलत है।', err_rate: 'बहुत ज़्यादा कोशिशें। कृपया बाद में फिर करें।', err_generic: 'कुछ गड़बड़ हो गई। फिर कोशिश करें।',
+      err_network: 'सर्वर से कनेक्ट नहीं हो पा रहा। क्या वह चालू है?', err_file_type: 'कृपया JPG, PNG या WEBP फोटो चुनें।', err_file_big: 'फोटो बहुत बड़ी है (अधिकतम 2 MB)।',
+      err_auth: 'कृपया फिर से लॉगिन करें।', err_wrong_password: 'पासवर्ड गलत है।', err_consent: 'आगे बढ़ने के लिए सहमति दें।', err_required: 'यह जानकारी ज़रूरी है।',
+      err_forbidden: 'रिक्वेस्ट रोकी गई। पेज रीफ्रेश करके फिर कोशिश करें।', err_invalid_input: 'गलत जानकारी।',
+      d_hello: 'नमस्ते, {name}', d_sub: 'यह आपकी सुरक्षा का सारांश है।',
+      d_checks: 'जांचे गए मैसेज', d_high: 'पकड़ी गई बड़ी ठगी', d_quiz: 'क्विज़ का सबसे अच्छा स्कोर', d_plays: 'खेले गए क्विज़',
+      d_recent: 'हाल की जांच', d_empty: 'अभी कोई जांच नहीं। पहला मैसेज जांचें, वह यहाँ दिखेगा।', d_top: 'सबसे आम खतरे के संकेत', d_dist: 'रिस्क का बंटवारा', d_cta: 'मैसेज जांचें', d_none: 'अभी कुछ नहीं',
+      d_privacy: 'सिर्फ स्कोर और संकेतों के नाम सेव होते हैं। आपके मैसेज का टेक्स्ट कभी सेव नहीं होता।',
+      lvl_low: 'कोई बड़ा खतरा नहीं', lvl_mid: 'संदिग्ध - सावधान रहें', lvl_high: 'ज़्यादा खतरा - ठगी की संभावना', score: 'रिस्क स्कोर',
+      c_title: 'स्कैम चेकर', c_sub: 'मैसेज, लिंक या टिप पेस्ट करें या बोलें। हम जानी-पहचानी ठगी के पैटर्न ढूंढते हैं।',
+      c_paste: 'संदिग्ध मैसेज या लिंक', c_ph: 'यहाँ पेस्ट करें, जैसे: "हमारा VIP ग्रुप जॉइन करें, रोज़ 5% पक्का मुनाफा। आज ही रजिस्ट्रेशन फीस जमा करें।"',
+      c_check: 'अभी जांचें', c_mic: 'बोलें', c_listening: 'सुन रहा हूँ...', c_clear: 'साफ़ करें', c_samples: 'उदाहरण आज़माएं:',
+      c_s1: 'पक्का रिटर्न', c_s2: 'KYC धमकी', c_s3: 'टिप्स ग्रुप', c_s4: 'असली बैंक अलर्ट',
+      c_empty: 'पहले कोई मैसेज लिखें या पेस्ट करें।', c_idle_t: 'आपका नतीजा यहाँ दिखेगा', c_idle_d: 'बाईं ओर मैसेज पेस्ट करें और "अभी जांचें" दबाएं।',
+      c_none: 'कोई जाना-पहचाना स्कैम पैटर्न नहीं मिला।', c_links: 'लिंक जांच', c_next: 'अब क्या करें',
+      c_speak: 'पढ़कर सुनाएं', c_share: 'परिवार को WhatsApp पर सावधान करें',
+      c_disc: 'यह सिर्फ पैटर्न जांच है, गारंटी नहीं। "कोई खतरा नहीं मिला" का मतलब "सुरक्षित" नहीं है। शक हो तो आधिकारिक साइट पर खुद जांचें।',
+      c_private: 'आपका मैसेज इसी डिवाइस पर रहता है। हिस्ट्री में सिर्फ स्कोर सेव होता है।', c_saved: 'आपकी हिस्ट्री में सेव हो गया।', c_login_hint: 'प्राइवेट हिस्ट्री रखने के लिए लॉगिन करें।',
+      c_voice_no: 'यहाँ वॉइस इनपुट सपोर्ट नहीं है। कृपया Chrome इस्तेमाल करें।', c_voice_err: 'आवाज़ सुनाई नहीं दी। फिर कोशिश करें।',
+      lf_http: 'असुरक्षित लिंक (http)', lf_ip: 'सीधा IP पता इस्तेमाल हुआ', lf_short: 'छोटा लिंक असली पता छुपाता है', lf_puny: 'डोमेन में मिलते-जुलते अक्षर', lf_tld: 'जोखिम भरा डोमेन अंत', lf_fake: '{brand} जैसा दिखता है पर आधिकारिक साइट नहीं है', lf_official: 'आधिकारिक डोमेन से मेल खाता है',
+      steps_high: ['जवाब न दें, लिंक न खोलें, पैसे न भेजें, OTP / PIN न बताएं।', 'भेजने वाले को ब्लॉक और रिपोर्ट करें।', 'पैसे कट गए हों तो तुरंत 1930 (साइबर हेल्पलाइन) पर कॉल करें और cybercrime.gov.in पर शिकायत करें।', 'शेयर बाज़ार से जुड़ी शिकायत के लिए SEBI SCORES इस्तेमाल करें।', 'घरवालों और दोस्तों को बताएं।'],
+      steps_mid: ['अभी लिंक न खोलें, पैसे न दें।', 'कंपनी को SEBI की आधिकारिक वेबसाइट (रजिस्टर्ड इंटरमीडियरी) पर जांचें।', 'कुछ करने से पहले घर के भरोसेमंद व्यक्ति से पूछें।', 'शक बना रहे तो 1930 पर कॉल करें या बैंक से पूछें।'],
+      steps_low: ['फिर भी भेजने वाले को आधिकारिक वेबसाइट या ऐप से जांचें।', 'OTP / PIN किसी को न बताएं।', 'कुछ गड़बड़ लगे तो 1930 या cybercrime.gov.in पर बताएं।'],
+      share_text: 'सावधान! मैंने NiveshKavach से एक मैसेज जांचा: {level}। OTP/PIN कभी न बताएं। ठगी हो तो 1930 पर कॉल करें।',
+      q_title: 'स्कैम पहचान क्विज़', q_sub: 'यह मैसेज ठगी है या सुरक्षित? टैप करके जवाब दें।', q_scam: 'ठगी', q_safe: 'सुरक्षित लगता है', q_next: 'आगे', q_finish: 'नतीजा देखें',
+      q_right: 'सही!', q_wrong: 'गलत।', q_done: 'क्विज़ पूरा!', q_score: 'आपका स्कोर: {s} / {n}', q_again: 'फिर खेलें', q_saved: 'स्कोर आपके डैशबोर्ड में सेव हो गया।', q_of: 'सवाल {i} / {n}',
+      q_msg_great: 'शानदार! आप ठगी पहचान सकते हैं।', q_msg_ok: 'अच्छी शुरुआत। अभ्यास से और सुरक्षित बनेंगे।', q_msg_low: 'सावधान रहें और मदद पेज की सलाह पढ़ें।',
+      p_title: 'मेरी प्रोफ़ाइल', p_photo: 'फोटो बदलें', p_remove: 'फोटो हटाएं', p_uploading: 'अपलोड हो रहा है...', p_photo_ok: 'प्रोफ़ाइल फोटो अपडेट हो गई।', p_photo_gone: 'फोटो हटा दी गई।',
+      p_details: 'व्यक्तिगत जानकारी', p_email_ro: 'ईमेल बदला नहीं जा सकता।', p_save: 'बदलाव सेव करें', p_saved: 'प्रोफ़ाइल अपडेट हो गई।',
+      p_security: 'सुरक्षा', p_changepass: 'पासवर्ड बदलें', p_pass_ok: 'पासवर्ड बदल गया।',
+      p_member: '{date} से सदस्य', p_danger: 'खतरनाक क्षेत्र', p_delete: 'मेरा अकाउंट डिलीट करें', p_delete_desc: 'इससे आपका अकाउंट, फोटो और हिस्ट्री हमेशा के लिए मिट जाएगी।', p_delete_confirm: 'पुष्टि के लिए पासवर्ड लिखें', p_delete_go: 'हाँ, सब डिलीट करें', p_cancel: 'रद्द करें', p_deleted: 'अकाउंट डिलीट हो गया।',
+      help_title: 'सुरक्षित रहें: छोटी गाइड', help_sub: 'आसान नियम जो ज़्यादातर निवेश ठगी रोक देते हैं।',
+      help_tips: ['OTP, PIN, CVV या पासवर्ड किसी को न बताएं, "बैंक वाले" को भी नहीं।', 'कोई मुनाफे की गारंटी नहीं दे सकता। "पक्की टिप" और रोज़ के मुनाफे वाले ऑफर से सावधान रहें।', 'निवेश से पहले ब्रोकर या सलाहकार को SEBI की आधिकारिक वेबसाइट पर जांचें।', 'अजनबी के कहने पर ऐप इंस्टॉल न करें, स्क्रीन शेयर न करें।', 'पैसे पाने के लिए PIN डालने की ज़रूरत कभी नहीं होती।', 'पैसे देने से पहले घर में पूछें। ठग दूसरी राय से डरते हैं।'],
+      help_res: 'ठगी हो जाए तो तुरंत कदम उठाएं', help_call: '1930 पर कॉल करें', help_call_d: 'राष्ट्रीय साइबर क्राइम हेल्पलाइन। पहले कुछ घंटों में कॉल करने से पैसा रुकने की संभावना रहती है।', help_portal_d: 'ऑनलाइन ठगी की शिकायत राष्ट्रीय पोर्टल पर दर्ज करें।', help_scores_d: 'ब्रोकर और लिस्टेड कंपनियों की शिकायत दर्ज करें।',
+      foot_disc: 'NiveshKavach सिर्फ जागरूकता का टूल है, वित्तीय सलाह नहीं। यह किसी मैसेज के सुरक्षित होने की गारंटी नहीं दे सकता।', foot_built: 'SANGYAN हैकाथॉन - ट्रैक A के लिए बनाया गया',
+      loading: 'लोड हो रहा है...', not_found: 'पेज नहीं मिला'
+    },
+
+    mr: {
+      brand_a: 'निवेश', brand_b: 'कवच', tagline: 'सुरक्षित गुंतवणूक. नेहमी सतर्क.',
+      nav_home: 'मुख्यपृष्ठ', nav_check: 'फसवणूक तपासा', nav_quiz: 'क्विझ', nav_help: 'मदत', nav_dashboard: 'डॅशबोर्ड', nav_profile: 'प्रोफाइल',
+      login: 'लॉगिन', register: 'साइन अप', logout: 'लॉगआउट', menu: 'मेनू', lang_label: 'भाषा',
+      theme_to_dark: 'डार्क मोड सुरू करा', theme_to_light: 'लाइट मोड सुरू करा', big_text: 'मोठा मजकूर', skip: 'थेट मजकुराकडे जा',
+      h_badge: 'गुंतवणूकदार संरक्षण - ट्रॅक A',
+      h_title1: 'फसवणूक ओळखा', h_title2: 'पैसे जाण्यापूर्वी.',
+      h_sub: 'कोणताही संशयास्पद मेसेज, लिंक किंवा टिप काही सेकंदांत तपासा - तुमच्या भाषेत, तुमच्या फोनवर. तुमचा मेसेज तुमच्या डिव्हाइसबाहेर जात नाही.',
+      cta_start: 'मोफत खाते उघडा', cta_try: 'आत्ता मेसेज तपासा', cta_dash: 'माझा डॅशबोर्ड उघडा',
+      pill1: '१००% डिव्हाइसवर तपासणी', pill2: 'हिंदी - English - मराठी', pill3: 'आवाज सुविधा',
+      demo_live: 'लाइव्ह ओळख', demo_msg: 'मेसेज',
+      f_title: 'सुरक्षित राहण्यासाठी गुंतवणूकदाराला जे हवे ते सर्व', f_sub: 'संपूर्ण भारतातील पहिल्यांदा गुंतवणूक करणाऱ्यांसाठी.',
+      f1t: 'स्मार्ट फसवणूक ओळख', f1d: '१२ फसवणूक पद्धती: हमखास परतावा, बनावट टिप्स ग्रुप, OTP आणि KYC फिशिंग आणि बरेच काही.',
+      f2t: 'लिंक आणि डोमेन तपासणी', f2d: 'SEBI, NSDL आणि बँकांसारखी दिसणारी बनावट डोमेन, लहान आणि असुरक्षित लिंक पकडते.',
+      f3t: 'बोला आणि ऐका', f3d: 'कमी शिकलेल्यांसाठी हिंदी, मराठी आणि इंग्रजीत आवाजाने इनपुट आणि वाचून दाखवणे.',
+      f4t: 'गोपनीयता प्रथम', f4d: 'तुमचा मेसेज तुमच्या ब्राउझरमध्येच तपासला जातो. इतिहासात फक्त स्कोअर साठवला जातो.',
+      f5t: 'फसवणूक ओळख क्विझ', f5d: 'छोट्या उदाहरणांतून खऱ्या फसवणुकीच्या पद्धती शिका आणि प्रगती पहा.',
+      f6t: 'स्पष्ट कृती योजना', f6d: 'पुढील पावले: 1930 सायबर हेल्पलाइन, cybercrime.gov.in आणि SEBI SCORES.',
+      how_title: 'हे कसे चालते',
+      s1t: 'पेस्ट करा किंवा बोला', s1d: 'संशयास्पद मेसेज किंवा लिंक कॉपी करा, किंवा फक्त बोला.',
+      s2t: 'जोखीम स्कोअर मिळवा', s2d: 'सोप्या शब्दांत पहा की हे धोकादायक का वाटते.',
+      s3t: 'सुरक्षित पावले उचला', s3d: 'पायऱ्या पाळा आणि एका टॅपमध्ये कुटुंबाला सावध करा.',
+      st1: 'फसवणूक पद्धती', st2: 'भाषा', st3: 'अपलोड झालेले मेसेज', st4: 'सायबर हेल्पलाइन',
+      promise_title: 'आमचे वचन', promise1: 'कोणतीही स्टॉक टिप, भावाचा अंदाज किंवा ब्रोकर जाहिरात नाही.', promise2: 'तुमचा OTP, SMS किंवा कॉन्टॅक्ट्स वापरले जात नाहीत.', promise3: 'आम्ही अनिश्चितता स्पष्ट सांगतो - "धोका नाही" म्हणजे "सुरक्षित" नाही.', promise4: 'तुम्ही कधीही तुमचे खाते आणि डेटा डिलीट करू शकता.',
+      cta2_title: 'आजच स्वतःचे आणि कुटुंबाचे रक्षण करा', cta2_sub: 'खाते उघडायला फक्त ३० सेकंद लागतात.',
+      a_login_title: 'पुन्हा स्वागत', a_login_sub: 'तुमचा सुरक्षा डॅशबोर्ड पाहण्यासाठी लॉगिन करा.',
+      a_reg_title: 'तुमचे खाते उघडा', a_reg_sub: 'कायम मोफत. कार्डची गरज नाही.',
+      a_side_title: 'गुंतवणूक फसवणुकीविरुद्ध तुमचे कवच', a_side1: 'हिंदी, मराठी आणि इंग्रजीत फसवणूक ओळखा', a_side2: 'तपासलेल्या गोष्टींची खासगी नोंद ठेवा', a_side3: 'मजेदार क्विझमधून शिका',
+      f_name: 'पूर्ण नाव', f_phone: 'मोबाइल नंबर', f_email: 'ईमेल', f_pass: 'पासवर्ड', f_newpass: 'पासवर्ड तयार करा', f_curpass: 'सध्याचा पासवर्ड',
+      ph_name: 'तुमचे पूर्ण नाव', ph_phone: '१० अंकी मोबाइल नंबर', ph_email: 'you@example.com', ph_pass: 'तुमचा पासवर्ड', ph_newpass: 'किमान ८ अक्षरे',
+      pass_hint: 'किमान ८ अक्षरे, त्यात एक अक्षर आणि एक अंक असावा.', str_weak: 'कमकुवत', str_ok: 'ठीक', str_strong: 'मजबूत',
+      btn_login: 'लॉगिन', btn_register: 'खाते उघडा', have_acc: 'आधीच खाते आहे?', no_acc: 'नवीन आहात?',
+      show_pass: 'पासवर्ड दाखवा', hide_pass: 'पासवर्ड लपवा',
+      consent: 'मला समजले आहे की माझे मेसेज माझ्या डिव्हाइसवरच तपासले जातात, अपलोड होत नाहीत.',
+      welcome_toast: 'स्वागत, {name}!', bye_toast: 'तुम्ही लॉगआउट झालात.',
+      err_invalid_name: 'तुमचे पूर्ण नाव लिहा (२-६० अक्षरे).', err_invalid_phone: 'योग्य १० अंकी भारतीय मोबाइल नंबर लिहा.',
+      err_invalid_email: 'योग्य ईमेल पत्ता लिहा.', err_invalid_password: 'पासवर्डमध्ये ८+ अक्षरे, एक अक्षर आणि एक अंक हवा.',
+      err_exists_email: 'हा ईमेल आधीच नोंदणीकृत आहे. लॉगिन करा.', err_exists_phone: 'हा मोबाइल नंबर आधीच नोंदणीकृत आहे.',
+      err_creds: 'ईमेल किंवा पासवर्ड चुकीचा आहे.', err_rate: 'खूप जास्त प्रयत्न. कृपया नंतर पुन्हा करा.', err_generic: 'काहीतरी चूक झाली. पुन्हा प्रयत्न करा.',
+      err_network: 'सर्व्हरशी संपर्क होत नाही. तो सुरू आहे का?', err_file_type: 'कृपया JPG, PNG किंवा WEBP फोटो निवडा.', err_file_big: 'फोटो खूप मोठा आहे (कमाल 2 MB).',
+      err_auth: 'कृपया पुन्हा लॉगिन करा.', err_wrong_password: 'पासवर्ड चुकीचा आहे.', err_consent: 'पुढे जाण्यासाठी संमती द्या.', err_required: 'ही माहिती आवश्यक आहे.',
+      err_forbidden: 'विनंती थांबवली. पेज रिफ्रेश करून पुन्हा प्रयत्न करा.', err_invalid_input: 'चुकीची माहिती.',
+      d_hello: 'नमस्कार, {name}', d_sub: 'हा तुमचा सुरक्षा सारांश आहे.',
+      d_checks: 'तपासलेले मेसेज', d_high: 'पकडलेली मोठी फसवणूक', d_quiz: 'क्विझमधील सर्वोत्तम स्कोअर', d_plays: 'खेळलेले क्विझ',
+      d_recent: 'अलीकडील तपासण्या', d_empty: 'अजून तपासणी नाही. पहिला मेसेज तपासा, तो इथे दिसेल.', d_top: 'सर्वात सामान्य धोक्याची चिन्हे', d_dist: 'जोखमीची विभागणी', d_cta: 'मेसेज तपासा', d_none: 'अजून काही नाही',
+      d_privacy: 'फक्त स्कोअर आणि चिन्हांची नावे साठवली जातात. तुमच्या मेसेजचा मजकूर कधीही साठवला जात नाही.',
+      lvl_low: 'मोठा धोका नाही', lvl_mid: 'संशयास्पद - सावध रहा', lvl_high: 'जास्त धोका - फसवणुकीची शक्यता', score: 'जोखीम स्कोअर',
+      c_title: 'फसवणूक तपासक', c_sub: 'मेसेज, लिंक किंवा टिप पेस्ट करा किंवा बोला. आम्ही ओळखीच्या फसवणूक पद्धती शोधतो.',
+      c_paste: 'संशयास्पद मेसेज किंवा लिंक', c_ph: 'इथे पेस्ट करा, उदा. "आमचा VIP ग्रुप जॉइन करा, रोज 5% हमखास नफा. आजच रजिस्ट्रेशन फी भरा."',
+      c_check: 'आत्ता तपासा', c_mic: 'बोला', c_listening: 'ऐकत आहे...', c_clear: 'पुसून टाका', c_samples: 'उदाहरण वापरून पहा:',
+      c_s1: 'हमखास परतावा', c_s2: 'KYC धमकी', c_s3: 'टिप्स ग्रुप', c_s4: 'खरा बँक अलर्ट',
+      c_empty: 'आधी मेसेज लिहा किंवा पेस्ट करा.', c_idle_t: 'तुमचा निकाल इथे दिसेल', c_idle_d: 'डावीकडे मेसेज पेस्ट करा आणि "आत्ता तपासा" दाबा.',
+      c_none: 'कोणतीही ओळखीची फसवणूक पद्धत आढळली नाही.', c_links: 'लिंक तपासणी', c_next: 'आता काय करावे',
+      c_speak: 'वाचून दाखवा', c_share: 'कुटुंबाला WhatsApp वर सावध करा',
+      c_disc: 'ही फक्त पद्धत तपासणी आहे, हमी नाही. "धोका आढळला नाही" म्हणजे "सुरक्षित" नाही. शंका असल्यास अधिकृत साइटवर स्वतः तपासा.',
+      c_private: 'तुमचा मेसेज याच डिव्हाइसवर राहतो. इतिहासात फक्त स्कोअर साठवला जातो.', c_saved: 'तुमच्या इतिहासात साठवले.', c_login_hint: 'खासगी इतिहास ठेवण्यासाठी लॉगिन करा.',
+      c_voice_no: 'इथे आवाज इनपुट उपलब्ध नाही. कृपया Chrome वापरा.', c_voice_err: 'आवाज ऐकू आला नाही. पुन्हा प्रयत्न करा.',
+      lf_http: 'असुरक्षित लिंक (http)', lf_ip: 'थेट IP पत्ता वापरला', lf_short: 'लहान लिंक खरा पत्ता लपवते', lf_puny: 'डोमेनमध्ये सारखी दिसणारी अक्षरे', lf_tld: 'जोखमीचा डोमेन शेवट', lf_fake: '{brand} सारखे दिसते पण अधिकृत साइट नाही', lf_official: 'अधिकृत डोमेनशी जुळते',
+      steps_high: ['उत्तर देऊ नका, लिंक उघडू नका, पैसे पाठवू नका, OTP / PIN सांगू नका.', 'पाठवणाऱ्याला ब्लॉक आणि रिपोर्ट करा.', 'पैसे गेले असतील तर लगेच 1930 (सायबर हेल्पलाइन) वर कॉल करा आणि cybercrime.gov.in वर तक्रार करा.', 'शेअर बाजारासंबंधी तक्रारीसाठी SEBI SCORES वापरा.', 'घरच्यांना आणि मित्रांना सांगा.'],
+      steps_mid: ['आत्ता लिंक उघडू नका, पैसे देऊ नका.', 'कंपनीची SEBI च्या अधिकृत वेबसाइटवर (नोंदणीकृत मध्यस्थ) तपासणी करा.', 'काही करण्यापूर्वी घरच्या विश्वासू व्यक्तीला विचारा.', 'तरीही शंका असल्यास 1930 वर कॉल करा किंवा बँकेला विचारा.'],
+      steps_low: ['तरीही पाठवणाऱ्याला अधिकृत वेबसाइट किंवा अॅपवरून तपासा.', 'OTP / PIN कोणालाही सांगू नका.', 'काही खटकले तर 1930 किंवा cybercrime.gov.in वर कळवा.'],
+      share_text: 'सावध! मी NiveshKavach ने एक मेसेज तपासला: {level}. OTP/PIN कधीही सांगू नका. फसवणूक झाल्यास 1930 वर कॉल करा.',
+      q_title: 'फसवणूक ओळख क्विझ', q_sub: 'हा मेसेज फसवणूक आहे की सुरक्षित? टॅप करून उत्तर द्या.', q_scam: 'फसवणूक', q_safe: 'सुरक्षित वाटते', q_next: 'पुढे', q_finish: 'निकाल पहा',
+      q_right: 'बरोबर!', q_wrong: 'चुकले.', q_done: 'क्विझ पूर्ण!', q_score: 'तुमचा स्कोअर: {s} / {n}', q_again: 'पुन्हा खेळा', q_saved: 'स्कोअर तुमच्या डॅशबोर्डमध्ये साठवला.', q_of: 'प्रश्न {i} / {n}',
+      q_msg_great: 'उत्तम! तुम्ही फसवणूक ओळखू शकता.', q_msg_ok: 'चांगली सुरुवात. सरावाने अधिक सुरक्षित व्हाल.', q_msg_low: 'सावध रहा आणि मदत पेजवरील टिप्स वाचा.',
+      p_title: 'माझी प्रोफाइल', p_photo: 'फोटो बदला', p_remove: 'फोटो काढा', p_uploading: 'अपलोड होत आहे...', p_photo_ok: 'प्रोफाइल फोटो अपडेट झाला.', p_photo_gone: 'फोटो काढला.',
+      p_details: 'वैयक्तिक माहिती', p_email_ro: 'ईमेल बदलता येत नाही.', p_save: 'बदल साठवा', p_saved: 'प्रोफाइल अपडेट झाली.',
+      p_security: 'सुरक्षा', p_changepass: 'पासवर्ड बदला', p_pass_ok: 'पासवर्ड बदलला.',
+      p_member: '{date} पासून सदस्य', p_danger: 'धोक्याचा विभाग', p_delete: 'माझे खाते डिलीट करा', p_delete_desc: 'यामुळे तुमचे खाते, फोटो आणि इतिहास कायमचा मिटेल.', p_delete_confirm: 'खात्रीसाठी पासवर्ड लिहा', p_delete_go: 'हो, सर्व डिलीट करा', p_cancel: 'रद्द करा', p_deleted: 'खाते डिलीट झाले.',
+      help_title: 'सुरक्षित रहा: छोटी मार्गदर्शिका', help_sub: 'साधे नियम जे बहुतेक गुंतवणूक फसवणूक थांबवतात.',
+      help_tips: ['OTP, PIN, CVV किंवा पासवर्ड कोणालाही सांगू नका, "बँकेचे कर्मचारी" असले तरीही नाही.', 'कोणीही नफ्याची हमी देऊ शकत नाही. "हमखास टिप" आणि रोजच्या नफ्याच्या ऑफरपासून सावध रहा.', 'गुंतवणुकीपूर्वी ब्रोकर किंवा सल्लागार SEBI च्या अधिकृत वेबसाइटवर तपासा.', 'अनोळखी व्यक्तीच्या सांगण्यावरून अॅप इन्स्टॉल करू नका, स्क्रीन शेअर करू नका.', 'पैसे मिळवण्यासाठी PIN टाकण्याची गरज कधीच नसते.', 'पैसे देण्यापूर्वी घरच्यांना विचारा. फसवणूक करणाऱ्यांना दुसरे मत नको असते.'],
+      help_res: 'फसवणूक झाली तर लगेच कृती करा', help_call: '1930 वर कॉल करा', help_call_d: 'राष्ट्रीय सायबर क्राइम हेल्पलाइन. पहिल्या काही तासांत कॉल केल्यास पैसे थांबण्याची शक्यता असते.', help_portal_d: 'ऑनलाइन फसवणुकीची तक्रार राष्ट्रीय पोर्टलवर नोंदवा.', help_scores_d: 'ब्रोकर आणि लिस्टेड कंपन्यांविरुद्ध तक्रार नोंदवा.',
+      foot_disc: 'NiveshKavach हे फक्त जागरूकतेचे साधन आहे, आर्थिक सल्ला नाही. कोणताही मेसेज सुरक्षित असल्याची हमी ते देऊ शकत नाही.', foot_built: 'SANGYAN हॅकाथॉन - ट्रॅक A साठी बनवले',
+      loading: 'लोड होत आहे...', not_found: 'पेज सापडले नाही'
+    }
+  };
+
+  const CODES = ['en', 'hi', 'mr'];
+  const LOCALE = { en: 'en-IN', hi: 'hi-IN', mr: 'mr-IN' };
+  let lang = 'en';
+  try {
+    const saved = window.localStorage && localStorage.getItem('nk_lang');
+    if (CODES.includes(saved)) lang = saved;
+    else if (typeof navigator !== 'undefined' && /^hi/i.test(navigator.language || '')) lang = 'hi';
+    else if (typeof navigator !== 'undefined' && /^mr/i.test(navigator.language || '')) lang = 'mr';
+  } catch (_) { /* ignore */ }
+
+  function t(key, vars) {
+    let s = DICT[lang][key];
+    if (s === undefined) s = DICT.en[key];
+    if (s === undefined) return key;
+    if (vars && typeof s === 'string') s = s.replace(/\{(\w+)\}/g, (m, k) => (vars[k] !== undefined ? vars[k] : m));
+    return s;
+  }
+
+  window.NK_DICT = DICT;
+  window.NK = {
+    CODES, LOCALE,
+    get lang() { return lang; },
+    get locale() { return LOCALE[lang]; },
+    setLang(l) {
+      if (!CODES.includes(l)) return;
+      lang = l;
+      try { localStorage.setItem('nk_lang', l); } catch (_) { /* ignore */ }
+      if (typeof document !== 'undefined' && document.documentElement) document.documentElement.lang = l;
+    }
+  };
+  window.t = t;
+  if (typeof document !== 'undefined' && document.documentElement) document.documentElement.lang = lang;
+})();
