@@ -4,9 +4,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
+let DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
+try { fs.mkdirSync(DIR, { recursive: true }); fs.accessSync(DIR, fs.constants.W_OK); } catch (_) {
+  // e.g. hosts where the chosen folder is read-only: fall back to a writable temp folder
+  DIR = path.join(require('os').tmpdir(), 'nk-data');
+  fs.mkdirSync(DIR, { recursive: true });
+  console.warn('[db] data dir not writable, using', DIR);
+}
 const FILE = path.join(DIR, 'db.json');
-fs.mkdirSync(DIR, { recursive: true });
 
 let state = { users: [], sessions: {} };
 try {

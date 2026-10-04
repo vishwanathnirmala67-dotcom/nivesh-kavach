@@ -272,6 +272,19 @@ route('GET', '/api/stats', { auth: true }, ({ res, user }) => {
   send(res, 200, { user: pub(user), checks: h.length, levels, top, recent: h.slice(0, 8), quiz: user.quiz });
 });
 
+/* Owner-only overview. Disabled unless ADMIN_KEY is set. Shows name, email and counts only (never phone, password or messages). */
+route('GET', '/api/admin/users', { limit: rl('admin', 20, 15 * 60e3) }, ({ req, res }) => {
+  const key = process.env.ADMIN_KEY;
+  if (!key) return send(res, 404, { error: 'not_found' });
+  const given = String(req.headers['x-admin-key'] || '');
+  const a = crypto.createHash('sha256').update(given).digest(), b = crypto.createHash('sha256').update(key).digest();
+  if (!crypto.timingSafeEqual(a, b)) return send(res, 401, { error: 'bad_key' });
+  const day = Date.now() - 24 * 3600e3;
+  const users = db.state.users.map(u => ({ name: u.name, email: u.email, joined: u.createdAt, checks: u.history.length, lastCheck: u.history[0] ? u.history[0].t : null, quizBest: u.quiz.best }))
+    .sort((x, y) => y.joined - x.joined);
+  send(res, 200, { total: users.length, newToday: users.filter(u => u.joined > day).length, totalChecks: users.reduce((n, u) => n + u.checks, 0), users });
+});
+
 route('GET', '/api/health', {}, ({ res }) => send(res, 200, { ok: true, users: db.state.users.length }));
 
 async function handleApi(req, res, pathname) {
@@ -312,7 +325,9 @@ function serveStatic(req, res, pathname) {
   let rel;
   try { rel = decodeURIComponent(pathname); } catch (_) { res.writeHead(400); return res.end('Bad request'); }
   let base = PUBLIC, cache = PROD ? 'public, max-age=3600' : 'no-cache';
-  if (rel.startsWith('/uploads/')) { base = UPLOADS; rel = rel.slice(8); cache = 'public, max-age=3600'; }
+  const ROOT_PAGES = { '/admin': '/admin.html', '/admin.html': '/admin.html', '/admin.js': '/admin.js' };
+  if (ROOT_PAGES[rel]) { base = __dirname; rel = ROOT_PAGES[rel]; cache = 'no-store'; }
+  else if (rel.startsWith('/uploads/')) { base = UPLOADS; rel = rel.slice(8); cache = 'public, max-age=3600'; }
   else if (rel.endsWith('/')) rel += 'index.html';
   const file = path.normalize(path.join(base, rel));
   if (!file.startsWith(base + path.sep) || path.basename(file).startsWith('.')) { res.writeHead(404); return res.end('Not found'); }
